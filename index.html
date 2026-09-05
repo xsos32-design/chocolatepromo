@@ -580,7 +580,7 @@ function renderGift(){
  document.getElementById('gifts').innerHTML=h;
  document.getElementById('gift-n').textContent='　9 月 '+DATA.sgwp.length+' 組・8 月 '+DATA.agwp.length+' 組對照';
  document.getElementById('gonly').innerHTML='<ul class="list plain">'+DATA.gwponly.map(function(o){
-   return '<li><b>'+esc(o.no)+'</b>　'+esc(o.name)+'　<em>'+esc(o.brand)+'・'+nt(o.price)+'</em></li>';}).join('')+'</ul>';
+   return '<li>'+(o.code?wlink(o):('<b>'+esc(o.no)+'</b>　'+esc(o.name)))+'　<em>'+esc(o.brand)+'・'+nt(o.price)+'</em></li>';}).join('')+'</ul>';
 }
 function render(){renderSheet();renderGift();}
 document.getElementById('views').addEventListener('click',function(e){
