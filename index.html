@@ -460,21 +460,32 @@ ul.list.plain li em{font-style:normal;color:var(--ink-3);font-family:"IBM Plex M
 <style id="anv-css">
 .anv{margin:18px 0 6px;background:var(--surface);border:1px solid var(--line-strong);
   border-left:4px solid var(--drop);border-radius:4px;padding:16px 18px;box-shadow:var(--shadow)}
-.anv h2{font-family:"Noto Serif TC",serif;font-size:19px;margin:0 0 2px;display:flex;
+.anv h2{font-family:"Noto Serif TC",serif;font-size:19px;margin:0;display:flex;
   flex-wrap:wrap;gap:8px;align-items:baseline}
 .anv h2 small{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;
   color:var(--ink-3);font-weight:400}
-.anv .anv-hero{background:var(--drop-bg);border:1px solid var(--drop);border-radius:4px;
-  padding:13px 15px;margin:10px 0 0}
-.anv .anv-hero b.big{display:block;font-family:"Noto Serif TC",serif;font-size:18px;
-  color:var(--drop);margin:0 0 5px;line-height:1.35}
-.anv .anv-days{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0;padding:0;list-style:none}
-.anv .anv-days li{font-family:"IBM Plex Mono",monospace;font-size:12.5px;
-  background:var(--surface);border:1px solid var(--line-strong);border-radius:99px;padding:3px 10px}
-.anv .anv-meta{display:flex;flex-wrap:wrap;gap:4px 16px;margin:10px 0 0;padding:0;list-style:none;
-  font-size:12.5px;color:var(--ink-2);font-family:"IBM Plex Mono",monospace}
-.anv ul.anv-w{margin:12px 0 0;padding-left:20px}
+.anv .anv-sub{margin:4px 0 0;font-size:13px;color:var(--ink-2)}
+.anv .anv-grid{display:grid;gap:10px;margin:12px 0 0}
+@media(min-width:900px){.anv .anv-grid{grid-template-columns:1fr 1fr 1fr;align-items:start}}
+.anv .ac{border:1px solid var(--line-strong);border-radius:4px;padding:12px 14px;background:var(--surface)}
+.anv .ac.hi{background:var(--drop-bg);border-color:var(--drop)}
+.anv .ac .ac-k{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;
+  color:var(--ink-3);margin:0 0 4px}
+.anv .ac.hi .ac-k{color:var(--drop)}
+.anv .ac b.big{display:block;font-family:"Noto Serif TC",serif;font-size:16.5px;line-height:1.35;
+  margin:0 0 6px}
+.anv .ac.hi b.big{color:var(--drop)}
+.anv .ac p{margin:0;font-size:13.5px;color:var(--ink-2)}
+.anv .anv-days{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 0;padding:0;list-style:none}
+.anv .anv-days li{font-family:"IBM Plex Mono",monospace;font-size:12px;
+  background:var(--surface-2);border:1px solid var(--line-strong);border-radius:99px;padding:2px 9px}
+.anv .ac.hi .anv-days li{background:var(--surface)}
+.anv .anv-meta{margin:8px 0 0;padding:0;list-style:none;font-size:11.5px;color:var(--ink-3);
+  font-family:"IBM Plex Mono",monospace;line-height:1.7}
+.anv ul.anv-w{margin:14px 0 0;padding-left:20px}
 .anv ul.anv-w li{margin:0 0 6px}
+.anv .anv-note{margin:12px 0 0;padding:9px 12px;border:1px dashed var(--line-strong);
+  border-radius:4px;font-size:13px;color:var(--ink-2);background:var(--surface-2)}
 .anv .anv-f{margin:12px 0 0;padding-top:10px;border-top:1px solid var(--line);
   font-size:12.5px;color:var(--ink-3)}
 </style>
@@ -503,23 +514,51 @@ ul.list.plain li em{font-style:normal;color:var(--ink-3);font-family:"IBM Plex M
 <div class="wrap">
   <section id="view-sheet" class="sheet">
     <section class="anv">
-<h2>🎉 2026 週年慶・短波段贈品<small>昇展字第 115153 號・桃園機場</small></h2>
-<div class="anv-hero"><b class="big">巧克力／食品伴手禮區：單筆消費（折扣後）滿 $4,000 → 贈透明旅行袋</b>
-公文明寫<b>此活動可與 6 件 9 折活動 &amp; 巧克力折扣活動併行</b>——客人本來就要湊件折扣，
-折扣後金額再滿 $4,000 就多一個袋子。<u>「折扣照打，袋子照送。」</u>
-<ul class="anv-days"><li>09/24–09/28</li><li>10/02–10/11</li><li>10/23–10/26</li></ul>
-<ul class="anv-meta"><li>品號 2992543011931</li><li>GWP-小學課本透明旅行袋</li><li>限量 1,900 個</li><li>結帳時領取</li></ul></div>
+<h2>🎉 週年慶檔期速查<small>9/21 21:53 會議記錄 ・ 昇展字第 115153 號</small></h2>
+<p class="anv-sub">這一區現在<b>三檔同時在跑</b>，門檻不一樣、期間也不一樣，先看清楚再報。</p>
+<div class="anv-grid">
+
+  <div class="ac hi">
+    <p class="ac-k">❗ 要注意活動時間</p>
+    <b class="big">折扣後滿 $4,000<br>贈透明旅行袋</b>
+    <p>巧克力／食品伴手禮區單筆消費（<b>折扣後</b>）。公文明寫<b>可與 6 件 9 折活動 &amp; 巧克力折扣活動併行</b>。</p>
+    <ul class="anv-days"><li>09/24–09/28</li><li>10/02–10/11</li><li>10/23–10/26</li></ul>
+    <ul class="anv-meta"><li>2992543011931 GWP-小學課本透明旅行袋</li><li>限量 1,900 個・結帳時領取</li></ul>
+  </div>
+
+  <div class="ac">
+    <p class="ac-k">期間最長</p>
+    <b class="big">國產食品 &amp; 巧克力<br>滿 $2,000 折 $150</b>
+    <p>限<b>國產食品與巧克力</b>。這是三檔裡<b>門檻最低、期間最長</b>的一檔，平常日就用這句開場。</p>
+    <ul class="anv-days"><li>09/22–10/31</li></ul>
+    <ul class="anv-meta"><li>等於 92.5 折・每 $2,000 省 $150</li></ul>
+  </div>
+
+  <div class="ac">
+    <p class="ac-k">門檻最低</p>
+    <b class="big">消費不限金額<br>送會員禮</b>
+    <p>贈<b>磁吸潮台小燈箱乙份</b>，<b>限量、送完為止</b>。不限金額——<u>任何一單都可以講，是最好開口的一句。</u></p>
+    <ul class="anv-days"><li>09/22 起</li></ul>
+    <ul class="anv-meta"><li>磁吸潮台小燈箱・限量送完為止</li><li>⚠ 是否需出示／綁定會員，現場確認</li></ul>
+  </div>
+
+</div>
 <ul class="anv-w">
+<li><b>三檔的門檻要分開記</b>：不限金額 → 小燈箱；滿 $2,000 → 折 $150；折扣後滿 $4,000 → 旅行袋。
+<u>客人金額往上走的時候，一層一層往上加就好。</u></li>
+<li>❗ <b>旅行袋那檔要看日期</b>：只有 09/24–09/28、10/02–10/11、10/23–10/26 三段，
+中間的 09/29–10/01、10/12–10/22 <b>沒有</b>。滿 $2,000 折 $150 則是 09/22–10/31 <b>整段都有</b>。
+客人說「上次來有送袋子」時，先確認日期。</li>
 <li><b>「折扣後」滿 $4,000 才算</b>——是折扣<u>之後</u>的實付金額，不是原價加總。
-客人湊完 2 件 85 折／3 件 75 折之後，要<b>重新看金額有沒有到 $4,000</b>。</li>
-<li><b>可與 6 件 9 折活動、巧克力折扣活動併行</b>（公文原文）。
-這是少見的「可併行」，主動講出來最有說服力。</li>
-<li><b>三個波段中間是斷開的</b>：09/29–10/01、10/12–10/22 沒有這個贈品。
-客人說「上次來有送」時，先確認是不是落在波段外。</li>
-<li>贈品<b>限量 1,900 個</b>，送完為止。</li>
+客人湊完 2 件 85 折／3 件 75 折之後，要重新看金額有沒有到 $4,000。</li>
+<li><b>可與 6 件 9 折活動、巧克力折扣活動併行</b>（公文原文），這是少見的「可併行」，主動講出來最有說服力。</li>
+<li>⚠ <b>待確認</b>：滿 $2,000 折 $150 的那 $150，在算「折扣後滿 $4,000」時<b>算不算折扣</b>？
+會影響客人湊到 $4,150 還是 $4,000。<u>這題結帳一定會碰到，請先問過主管或試刷一次。</u></li>
 </ul>
-<p class="anv-f">來源：昇恆昌公文「2026 週年慶-潮台由我不設限_短波段活動」（昇展字第 115153 號）
-區域短波段一・桃園機場，2026/09 現場公文實拍。<b>結帳實際折抵與贈品發放一律以 POS 與現場公告為準。</b>
+<p class="anv-note">🧹 <b>內部提醒</b>：賣場清潔要記得維持。（9/21 會議）</p>
+<p class="anv-f">來源：2026/09/21 21:53 會議記錄；旅行袋一檔另依昇恆昌公文「2026 週年慶-潮台由我不設限_短波段活動」
+（昇展字第 115153 號）區域短波段一・桃園機場，2026/09 現場公文實拍。
+<b>結帳實際折抵與贈品發放一律以 POS 與現場公告為準。</b>
 —— 小韋整理，⚠ 本頁為個人整理之速查，非公司正式公告。</p>
 </section>
     <section class="namecard" id="card">
