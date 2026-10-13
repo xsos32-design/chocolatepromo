@@ -1588,6 +1588,41 @@ function notes(){[].forEach.call(document.querySelectorAll('p.cmphint,p.imgnote,
  var sm=document.createElement('summary');sm.textContent=first;var body=document.createElement('div');body.innerHTML=html;
  d.appendChild(sm);d.appendChild(body);p.parentNode.replaceChild(d,p);});}
 notes();var nq=0;new MutationObserver(function(){if(nq)return;nq=requestAnimationFrame(function(){nq=0;notes();});}).observe(document.body,{childList:true,subtree:true});})();
+</script><style id="r18-dk">/* r18 深色模式補丁：活動頁在手機深色模式時，白底區塊一律換成深藍，字改象牙白（沉金夜航配色） */
+@media (prefers-color-scheme:dark){
+:root:not([data-theme="light"]) body{background:#0A111C!important;color:#E4EBF1}
+:root:not([data-theme="light"]) .views,:root:not([data-theme="light"]) nav#views{background:#0C1420!important;border-color:rgba(201,164,92,.22)!important;box-shadow:none!important}
+:root:not([data-theme="light"]) .views button{background:transparent!important;color:#E8CD8A!important;border:1px solid rgba(201,164,92,.45)!important;box-shadow:none!important}
+:root:not([data-theme="light"]) nav#views button[aria-selected="true"],:root:not([data-theme="light"]) .views button.on,:root:not([data-theme="light"]) .views button[aria-selected="true"],:root:not([data-theme="light"]) .views button[aria-pressed="true"]{background:#F3EAD7!important;color:#14233A!important;border-color:#F3EAD7!important}
+:root:not([data-theme="light"]) .tile,:root:not([data-theme="light"]) section.tile{background:#111A28!important;border-color:rgba(201,164,92,.22)!important;box-shadow:0 18px 36px -28px rgba(0,0,0,.9)!important}
+:root:not([data-theme="light"]) .tile-h{background:#152033!important;background-image:none!important;border-color:rgba(201,164,92,.25)!important}
+:root:not([data-theme="light"]) .tile h3,:root:not([data-theme="light"]) .tile-h h3{color:#F3EAD7!important}
+:root:not([data-theme="light"]) .tile-h p{color:#A7B1C0!important}
+:root:not([data-theme="light"]) .tile-n{background:rgba(201,164,92,.18)!important;color:#E8CD8A!important}
+:root:not([data-theme="light"]) .tile li{border-color:rgba(201,164,92,.14)!important}
+:root:not([data-theme="light"]) .gal,:root:not([data-theme="light"]) div.gal{background:#0E1726!important}
+:root:not([data-theme="light"]) .gal figure img{background:#F3EAD7;border-radius:10px}
+:root:not([data-theme="light"]) .r15th{background-color:#0E1726!important;background-image:none!important;border-color:rgba(201,164,92,.5)!important;color:#A7B1C0!important}
+:root:not([data-theme="light"]) .r15th img{background:#F3EAD7}
+:root:not([data-theme="light"]) a.wlk,:root:not([data-theme="light"]) .wlk{color:#EEF1F5!important}
+:root:not([data-theme="light"]) .wlk-i{color:#C9A45C!important}
+:root:not([data-theme="light"]) figcaption{color:#C9D1DB!important}
+:root:not([data-theme="light"]) .galbtn{color:#E8CD8A!important}
+:root:not([data-theme="light"]) button:not(.on):not(.act):not(.cal-btn):not([aria-selected="true"]):not([aria-pressed="true"]),:root:not([data-theme="light"]) summary,:root:not([data-theme="light"]) .fold,:root:not([data-theme="light"]) #totop{background:#111A28!important;color:#E8CD8A!important;border-color:rgba(201,164,92,.45)!important;box-shadow:none!important}
+:root:not([data-theme="light"]) input#q-disc,:root:not([data-theme="light"]) input[type="search"],:root:not([data-theme="light"]) input[type="text"]{background:#111A28!important;color:#F3EAD7!important;border-color:rgba(201,164,92,.45)!important}
+:root:not([data-theme="light"]) input::placeholder{color:#8C98AA!important}
+:root:not([data-theme="light"]) .tile.gift li .th{background:#1E2A3D!important;color:#E8CD8A!important}
+:root:not([data-theme="light"]) .tile.gift li .th.r16dash{background:none!important;color:#8C98AA!important}
+:root:not([data-theme="light"]) .tile.gift li .gw,:root:not([data-theme="light"]) .gw{color:#DCE2EA!important}
+:root:not([data-theme="light"]) details.r16note{color:#A7B1C0!important}
+:root:not([data-theme="light"]) details.r16note>summary{background:none!important;color:#A7B1C0!important;border:0!important}
+:root:not([data-theme="light"]) details.r16note>summary::after{background:#111A28!important;color:#E8CD8A!important;border-color:rgba(201,164,92,.45)!important}
+:root:not([data-theme="light"]) b.no,:root:not([data-theme="light"]) .no{color:#E8CD8A!important}
+:root:not([data-theme="light"]) em.pr b,:root:not([data-theme="light"]) .r15p b{color:#E8CD8A!important}
+:root:not([data-theme="light"]) em.pr span,:root:not([data-theme="light"]) .r15p span{background:rgba(232,138,154,.16)!important;color:#F2B8C2!important}
+:root:not([data-theme="light"]) .gal span.box{background:#F3EAD7!important}
+}
+</style><script id="r18-dk-js">
 </script><style id="r17-font">html body,html body *:not(svg):not(path):not(circle):not(rect){font-family:"Microsoft JhengHei","微軟正黑體",system-ui,-apple-system,"PingFang TC","Noto Sans TC","Noto Sans CJK TC",sans-serif!important}
 section.card .en,#r16home .en,.en,i.en,.navhead .sub{font-style:normal!important}</style></body>
 </html>
