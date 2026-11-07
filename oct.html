@@ -798,8 +798,9 @@ function hit(o){
  if(state.tier!=='all'&&o.tier!==state.tier)return false;
  var q=state.q;
  if(!q)return true;
- return [o.no,o.name,o.brand,o.cat,o.tlabel].join(' ').toLowerCase().indexOf(q)>=0;
+ return _xm(q,[o.no,o.code,o.name,o.brand,o.cat,o.tlabel].join(' '));
 }
+function _xm(q,t){t=String(t||'');return (window.XS&&XS.match)?XS.match(q,XS.key(t)):t.toLowerCase().indexOf(q)>=0;}
 function tag(o){
  if(NEW[o.code])return '<b class="tag n">新</b>';
  if(CHG[o.code])return '<b class="tag c">改</b>';
